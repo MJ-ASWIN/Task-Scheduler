@@ -1,0 +1,196 @@
+/* General Styling */
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+#splash .loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #007bff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+/* Hide splash screen */
+.hidden {
+  display: none;
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Welcome Greeting */
+.greeting-box.pro {
+  background: linear-gradient(45deg, #007bff, #3a8dff);
+  border-radius: 12px;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #FFB6C1, #3a8dff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.quote {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.quote-graphic {
+  margin-top: 10px;
+}
+
+/* Task Input Section */
+.task-form.pro {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-form input,
+.task-form select,
+.task-form button {
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.task-form input:focus,
+.task-form select:focus,
+.task-form button:focus {
+  border-color: #007bff;
+}
+
+.task-form input {
+  background-color: #f1f5f8;
+}
+
+.task-form select {
+  background-color: #f1f5f8;
+}
+
+.task-form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Task List Section */
+.task-list.pro {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  max-height: 400px;
+  overflow-y: auto; /* Makes the task list scrollable */
+}
+
+.task-list h2 {
+  color: #007bff;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.task-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.task-items li {
+  background: #f1f5f8;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.task-items li:hover {
+  background-color: #e6f0ff;
+}
+
+/* Scrollable Remove Button */
+.danger {
+  background-color: #f44336;
+  color: white;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 1rem;
+  position: sticky;
+  bottom: 20px; /* Keep the button at the bottom while scrolling */
+}
+
+.danger:hover {
+  background-color: #d32f2f;
+}
+
+/* Completion Feedback Section */
+.task-feedback {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4CAF50;
+}
+
+/* Animation for splash and main app */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

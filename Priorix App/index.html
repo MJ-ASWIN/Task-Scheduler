@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priorix - Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="splash">
+    <div class="loader"></div>
+    <h1 class="splash-title">Launching Priorix...</h1>
+  </div>
+
+  <main id="main-app" class="hidden">
+    <!-- Welcome Greeting -->
+    <section class="greeting-box pro">
+      <h1 class="gradient-text">Welcome to <span class="brand">Priorix</span> 👋</h1>
+      <p class="quote">“Conquer your day, one task at a time.”</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" class="quote-graphic" alt="motivation">
+    </section>
+
+    <!-- Task Input Section -->
+    <section class="task-form pro">
+      <input type="text" id="task" placeholder="✍️ What's the task?" required>
+      <select id="priority" required>
+        <option value="" disabled selected>🔥 Priority Level</option>
+        <option value="top">Top</option>
+        <option value="middle">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <input type="date" id="deadline" required>
+      <button id="add-task">➕ Add Task</button>
+    </section>
+
+    <!-- Task List Section -->
+    <section class="task-list pro">
+      <h2 class="section-title">📋 Your Queue</h2>
+      <ul id="tasks" class="task-items"></ul>
+      <button id="remove-task" class="danger">🗑️ Remove Oldest</button>
+    </section>
+
+    <!-- Completion Feedback -->
+    <section class="task-feedback" id="task-feedback"></section>
+  </main>
+  <link rel="stylesheet" href="style.css.css">
+  <script src="script.js"></script>
+</body>
+
+</html>
